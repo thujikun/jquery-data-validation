@@ -278,7 +278,7 @@ jQuery.fn.extend({
 
         /** case display error */
         if(options.defaultErrorDisp){
-            $('input[type="text"], textarea', self).bind('inputcheck', function(e, result){
+            self.bind('inputcheck', function(e, result){
                 options.setErrorMesssage($(this), result);
             });
         }
@@ -291,7 +291,7 @@ jQuery.fn.extend({
     $(document).ready(function(){
         /** check all data-role property */
         $('[data-role*="validation"]').each(function(){
-            $(this).alidate();
+            $(this).validate();
             return true;
         });
         return false;
