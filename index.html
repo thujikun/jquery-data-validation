@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="content-language" content="ja">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/validation.css" type="text/css" />
+    <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/validation.js"></script>
+	<title>入力チェックサンプル</title>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand">入力チェックサンプル</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <form action="/" class="validation-form">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="no">#</th>
+                        <th class="description">description</th>
+                        <th class="example">example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>必須/最大文字列長25/半角英数字</td>
+                        <td>
+                        	<input type="text" data-role="validation" data-required=true data-max-length=25 data-pos="top" data-format="half-char">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>最大数値2012/半角数値</td>
+                        <td>
+                        	<input type="text" data-role="validation" data-max-num=2012 data-format="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>必須/メールアドレス</td>
+                        <td>
+                        	<input type="text" data-role="validation" data-required=true data-format="mail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>最小文字列長10/半角カナ</td>
+                        <td>
+                        	<input type="text" data-role="validation" data-min-length=10 data-format="url">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+	</article>
+</body>
+</html>
