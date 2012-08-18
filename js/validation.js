@@ -229,17 +229,16 @@ jQuery.fn.extend({
                 /**
                  * @method Set error message
                  * @description Create message DOM and append
-                 * @param {Object} validation target
                  * @param {Object} validation result
                  * @return false
                  */
-                'setErrorMesssage': function(target, result){
-                    $('div.errorMessage', target.parent()).remove();
+                'setErrorMesssage': function(result){
+                    $('div.errorMessage', self.parent()).remove();
                     if(result.error){
-                        if(target.data('pos') === 'top'){
-                            target.parent().prepend($('<div></div>').addClass('errorMessage').text(result.errorMessage));
+                        if(self.data('pos') === 'top'){
+                            self.parent().prepend($('<div></div>').addClass('errorMessage').text(result.errorMessage));
                         }else{
-                            target.parent().append($('<div></div>').addClass('errorMessage').text(result.errorMessage));
+                            self.parent().append($('<div></div>').addClass('errorMessage').text(result.errorMessage));
                         }
                     }
                     return false;
@@ -274,12 +273,12 @@ jQuery.fn.extend({
 
         self.setValidation = options.setValidation;
         
-        self.setValidation($('input[type="text"], textarea', self));
+        self.setValidation();
 
         /** case display error */
         if(options.defaultErrorDisp){
             self.bind('inputcheck', function(e, result){
-                options.setErrorMesssage($(this), result);
+                options.setErrorMesssage(result);
             });
         }
 
