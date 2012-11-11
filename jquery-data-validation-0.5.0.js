@@ -338,18 +338,21 @@
             
             /** extend defaults object */
             options = (function(defaults, options){
-                for(p in defaults){
-                    if(!options[p]) options[p] = {};
-                    switch(typeof defaults[p]){
-                        case 'object':
-                            arguments.callee(defaults[p], options[p]);
-                            break;
-                        default:
-                            options[p] = defaults[p];
-                            break;
+                return cpObj();
+                function cpObj(){
+                    for(p in defaults){
+                        if(!options[p]) options[p] = {};
+                        switch(typeof defaults[p]){
+                            case 'object':
+                                cpObj(defaults[p], options[p]);
+                                break;
+                            default:
+                                options[p] = defaults[p];
+                                break;
+                        }
                     }
+                    return options;   
                 }
-                return options;
             })(options, defaults);
             
             for(p in options.checks){
