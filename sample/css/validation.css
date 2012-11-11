@@ -1,0 +1,14 @@
+body {
+  padding-top: 50px;
+}
+@media (max-width: 980px) {
+  body {
+    padding-top: 0;
+  }
+}
+body article table.table th.no {
+  width: 10px;
+}
+body article table.table th.description {
+  width: 200px;
+}
