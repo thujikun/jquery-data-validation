@@ -5,7 +5,8 @@ JQuery Plugin which enables real time validation with HTML5 custom data property
 
 ## Getting started
 All you have to do is only writing check specification to HTML tag and a little js code like below.
------------------------------------------------------------------------------------------
+
+```shell
 &lt;form&gt;
     &lt;input type="text" data-role="validation" data-required="true" data-max-length="25" data-format="half-char" data-title="sample"&gt;
 &lt;/form&gt;
@@ -16,7 +17,6 @@ All you have to do is only writing check specification to HTML tag and a little 
         $(document).ready(function){
             $('[data-role*="validation"]').each(function(){
                 var element = $(this).validate().setValidation();
-
                 element.on('inputcheck', function(e, result){
 
                     /** do function for error */
@@ -29,7 +29,7 @@ All you have to do is only writing check specification to HTML tag and a little 
         });
     }.call(window, jQuery);
 &lt;/script&gt;
------------------------------------------------------------------------------------------
+```
 
 ##Demo
 * Demo is [here](http://kabocha.orz.hm/test/jquery-data-validation.html)
