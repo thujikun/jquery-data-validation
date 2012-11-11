@@ -5,12 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css" type="text/css" />
+	<link rel="stylesheet" href="http://kabocha.orz.hm/test/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://kabocha.orz.hm/test/css/bootstrap-responsive.min.css" type="text/css" />
     <link rel="stylesheet" href="./css/validation.css" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/validation.js"></script>
+    <script type="text/javascript" src="http://kabocha.orz.hm/test/js/bootstrap.js"></script>
 	<title>入力チェックサンプル</title>
 </head>
 <body>
@@ -24,7 +23,7 @@
         </div>
     </header>
     <article>
-        <form action="/" class="validation-form" data-formvalidate=true data-realtime-check=true>
+        <form action="/" class="validation-form" data-formvalidate="true">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -38,33 +37,36 @@
                         <td>1</td>
                         <td>必須/最大文字列長25/半角英数字</td>
                         <td>
-                        	<input type="text" data-role="validation" data-required=true data-max-length=25 data-pos="top" data-format="half-char">
+                        	<input type="text" data-role="validation" data-required="true" data-max-length=25 data-pos="top" data-format="half-char" data-title="No.1">
                         </td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>最大数値2012/半角数値</td>
                         <td>
-                        	<input type="text" data-role="validation" data-max-num=2012 data-format="number">
+                        	<input type="text" data-role="validation" data-max-num="2012" data-format="number" data-title="No.2">
                         </td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>必須/メールアドレス</td>
                         <td>
-                        	<input type="text" data-role="validation" data-required=true data-format="mail">
+                        	<input type="text" data-role="validation" data-required="true" data-format="mail" data-title="No.3">
                         </td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>最小文字列長10/半角カナ</td>
+                        <td>最小文字列長10/url</td>
                         <td>
-                        	<input type="text" data-role="validation" data-min-length=10 data-format="url">
+                        	<input type="text" data-role="validation" data-min-length="10" data-format="url" data-title="No.4">
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <button type="submit">submit</button>
         </form>
 	</article>
+    <script type="text/javascript" src="./js/jquery-data-validation-0.5.0.js"></script>
+    <script type="text/javascript" src="./js/validation-sample.js"></script>
 </body>
 </html>
