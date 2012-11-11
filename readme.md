@@ -9,9 +9,9 @@ All you have to do is only writing check specification to HTML tag and a little 
 &lt;form&gt;
     &lt;input type="text" data-role="validation" data-required="true" data-max-length="25" data-format="half-char" data-title="sample"&gt;
 &lt;/form&gt;
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="./js/jquery-data-validation-0.5.0.js"></script>
-<script>
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="./js/jquery-data-validation-0.5.0.js"&gt;&lt;/script&gt;
+&lt;script&gt;
     !function($){}
         $(document).ready(function){
             $('[data-role*="validation"]').each(function(){
@@ -28,7 +28,7 @@ All you have to do is only writing check specification to HTML tag and a little 
             });
         });
     }.call(window, jQuery);
-</script>
+&lt;/script&gt;
 -----------------------------------------------------------------------------------------
 
 ##Demo
@@ -37,4 +37,4 @@ All you have to do is only writing check specification to HTML tag and a little 
 ## License
 Copyright (c) 2012 "thujikun" Ryosuke Tsuji  
 Licensed under the MIT license.  
-<https://github.com/thujikun/extended-local-storage/blob/master/LICENSE-MIT>
+<https://github.com/thujikun/jquery-data-validation/blob/master/LICENSE-MIT>
