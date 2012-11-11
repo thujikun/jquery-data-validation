@@ -12,3 +12,11 @@ body article table.table th.no {
 body article table.table th.description {
   width: 200px;
 }
+
+body header .brand h1 {
+  font-size: 100%;
+  line-height: inherit;
+}
+body footer .label.large {
+  font-size: 30px;
+}
