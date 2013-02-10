@@ -246,7 +246,7 @@
                      * @return this
                      */
                     'chkFormat': function(regType, value){
-                        if(regType === 'url') value = uriEncodeComponent(value);
+                        if(regType === 'url') value = encodeURIComponent(value);
                         if(!value.match(options.format[regType]) && value){
                             self.error = true;
                             self.itemError = true;
