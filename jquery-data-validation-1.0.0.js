@@ -66,7 +66,7 @@
                     'checks': {
                         'required':   {
                             check:   'chkRequired',
-                            handler: ['blur']
+                            handler: ['blur', 'keydown', 'paste', 'cut']
                         },
                         'required-check':   {
                             check:   'chkRequiredCheck',
@@ -282,7 +282,7 @@
 
                         self.itemError = false;
                         for(p in options.checks){
-                            param =  self.data(p);
+                            param = self.data(p);
                             if(param && !self.itemError){
                                 checks = options.checks[p];
                                 if(e && $.inArray(e.type, checks.handler) === -1) continue;
@@ -318,7 +318,7 @@
                      * @return this
                      */
                     'setValidation': function(){
-                        self.bind({
+                        self.on({
                             'blur':    self.execute,
                             'keydown': function(e){
                                 if(e.keyCode === 9 || ((e.ctrlKey || e.metaKey) && (e.keyCode === 86 || e.keyCode === 88))) return true;
